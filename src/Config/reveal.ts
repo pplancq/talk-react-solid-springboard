@@ -4,6 +4,8 @@ import RevealMarkdown from 'reveal.js/plugin/markdown/markdown';
 import RevealNotes from 'reveal.js/plugin/notes/notes';
 
 export const revealConfig: Options = {
+  width: 1400,
+
   hash: true,
   pdfSeparateFragments: false,
   plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
