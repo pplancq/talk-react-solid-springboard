@@ -1,0 +1,21 @@
+.exempleGrid {
+  display: grid;
+  grid-template-areas:
+    'header layout'
+    'footer layout';
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 16px;
+
+  .header {
+    grid-area: header;
+  }
+
+  .layout {
+    grid-area: layout;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
