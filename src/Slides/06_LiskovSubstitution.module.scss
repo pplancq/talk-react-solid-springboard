@@ -1,0 +1,24 @@
+.exampleGrid {
+  display: grid;
+  grid-template-areas:
+    'title1 title2'
+    'description1 description2';
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  .title1 {
+    grid-area: title1;
+  }
+
+  .title2 {
+    grid-area: title2;
+  }
+
+  .description1 {
+    grid-area: description1;
+  }
+
+  .description2 {
+    grid-area: description2;
+  }
+}
