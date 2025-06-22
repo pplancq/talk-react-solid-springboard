@@ -4,6 +4,7 @@ import { FirstStepSlide } from '@Front/Slides/03_FirstStep';
 import { SingleResponsibilitySlide } from '@Front/Slides/04_SingleResponsibility';
 import { OpenCloseSlide } from '@Front/Slides/05_OpenClose';
 import { LiskovSubstitutionSlide } from '@Front/Slides/06_LiskovSubstitution';
+import { InterfaceSegregationSlide } from '@Front/Slides/07_InterfaceSegregation';
 import { type ComponentType } from 'react';
 
 export const slides = [
@@ -13,4 +14,5 @@ export const slides = [
   SingleResponsibilitySlide,
   OpenCloseSlide,
   LiskovSubstitutionSlide,
+  InterfaceSegregationSlide,
 ] as ComponentType[];
