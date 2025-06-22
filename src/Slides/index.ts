@@ -6,6 +6,7 @@ import { OpenCloseSlide } from '@Front/Slides/05_OpenClose';
 import { LiskovSubstitutionSlide } from '@Front/Slides/06_LiskovSubstitution';
 import { InterfaceSegregationSlide } from '@Front/Slides/07_InterfaceSegregation';
 import { DependencyInversionSlide } from '@Front/Slides/08_DependencyInversion';
+import { ConclusionSlide } from '@Front/Slides/09_Conclusion';
 import { type ComponentType } from 'react';
 
 export const slides = [
@@ -17,4 +18,5 @@ export const slides = [
   LiskovSubstitutionSlide,
   InterfaceSegregationSlide,
   DependencyInversionSlide,
+  ConclusionSlide,
 ] as ComponentType[];
