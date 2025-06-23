@@ -1,6 +1,7 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -26,6 +27,12 @@ export const DependencyInversionSlide = () => {
           Depend on service interfaces (abstractions) rather than concrete implementations. Use Context or props to{' '}
           inject different behaviors.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 8 – Dependency Inversion Principle (DIP)
+- Déf. officielle : « Modules haut‐niveau et bas‐niveau dépendent d’abstractions »
+- En React : injecter des services via Context ou props
+- Exemple : FetchService abstraction + ApiFetchService / InMemoryFetchService
+- Usage dans DataViewer + swap dev vs prod
+- Bénéfice : changer d’implémentation sans modifier le composant`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -57,6 +64,12 @@ export const DependencyInversionSlide = () => {
 )`}</CodeBlock>
           </ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 8 – Dependency Inversion Principle (DIP)
+- Déf. officielle : « Modules haut‐niveau et bas‐niveau dépendent d’abstractions »
+- En React : injecter des services via Context ou props
+- Exemple : FetchService abstraction + ApiFetchService / InMemoryFetchService
+- Usage dans DataViewer + swap dev vs prod
+- Bénéfice : changer d’implémentation sans modifier le composant`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -86,6 +99,12 @@ export const DependencyInversionSlide = () => {
             Switch fetch strategies (API vs. in-memory) without touching the component’s code.
           </ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 8 – Dependency Inversion Principle (DIP)
+- Déf. officielle : « Modules haut‐niveau et bas‐niveau dépendent d’abstractions »
+- En React : injecter des services via Context ou props
+- Exemple : FetchService abstraction + ApiFetchService / InMemoryFetchService
+- Usage dans DataViewer + swap dev vs prod
+- Bénéfice : changer d’implémentation sans modifier le composant`}</NoteMarkdown>
       </Slide>
     </Slide>
   );

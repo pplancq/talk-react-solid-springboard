@@ -1,6 +1,7 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -23,6 +24,11 @@ export const OpenCloseSlide = () => {
         <Paragraph fragment fragmentIndex={0}>
           Use props-driven patterns or HOCs to extend behavior without modifying existing code.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 5 – Open/Closed Principle (OCP)
+- Déf. officielle : « Ouvert à l’extension, fermé à la modification »
+- En React : étendre le comportement via props/HOC sans toucher au cœur du code
+- Exemple Before (Button + icon-logic) / After (Button pur + withIcon HOC)
+- Bénéfice : on peut ajouter des cas d’usage sans risquer de casser`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -41,6 +47,11 @@ const Button = ({ color, size, variant, icon, iconPlacement, children, ...props 
 );
 `}</CodeBlock>
         <Paragraph>Button mixes core rendering and icon-placement logic.</Paragraph>
+        <NoteMarkdown>{`### Slide 5 – Open/Closed Principle (OCP)
+- Déf. officielle : « Ouvert à l’extension, fermé à la modification »
+- En React : étendre le comportement via props/HOC sans toucher au cœur du code
+- Exemple Before (Button + icon-logic) / After (Button pur + withIcon HOC)
+- Bénéfice : on peut ajouter des cas d’usage sans risquer de casser`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -77,6 +88,11 @@ const Button = ({ color, size, variant, icon, iconPlacement, children, ...props 
             Icon logic is added via <code>withIcon</code>, open for extension.
           </ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 5 – Open/Closed Principle (OCP)
+- Déf. officielle : « Ouvert à l’extension, fermé à la modification »
+- En React : étendre le comportement via props/HOC sans toucher au cœur du code
+- Exemple Before (Button + icon-logic) / After (Button pur + withIcon HOC)
+- Bénéfice : on peut ajouter des cas d’usage sans risquer de casser`}</NoteMarkdown>
       </Slide>
     </Slide>
   );

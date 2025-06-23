@@ -1,6 +1,7 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -25,6 +26,11 @@ export const SingleResponsibilitySlide = () => {
         <Paragraph fragment fragmentIndex={0}>
           Each component or hook must have a single responsibility.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 4 – Single Responsibility Principle (SRP)
+- Déf. officielle : « Une classe/composant n’a qu’une seule raison de changer »
+- En React : chaque composant ou hook fait une seule chose
+- Exemple Before/After (Layout vs header/footer extraits)
+- Bénéfice : meilleure lisibilité et testabilité`}</NoteMarkdown>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">React Example</Title>
@@ -42,6 +48,11 @@ export const SingleResponsibilitySlide = () => {
   </>
 );`}</CodeBlock>
         <Paragraph>Which extra responsibilities is `Layout` taking on beyond page structure?</Paragraph>
+        <NoteMarkdown>{`### Slide 4 – Single Responsibility Principle (SRP)
+- Déf. officielle : « Une classe/composant n’a qu’une seule raison de changer »
+- En React : chaque composant ou hook fait une seule chose
+- Exemple Before/After (Layout vs header/footer extraits)
+- Bénéfice : meilleure lisibilité et testabilité`}</NoteMarkdown>
       </Slide>
       <Slide autoAnimate>
         <Title variant="h3">React Example</Title>
@@ -92,6 +103,11 @@ export const SingleResponsibilitySlide = () => {
             Header and Footer each manage their own content, improving readability and testability.
           </ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 4 – Single Responsibility Principle (SRP)
+- Déf. officielle : « Une classe/composant n’a qu’une seule raison de changer »
+- En React : chaque composant ou hook fait une seule chose
+- Exemple Before/After (Layout vs header/footer extraits)
+- Bénéfice : meilleure lisibilité et testabilité`}</NoteMarkdown>
       </Slide>
     </Slide>
   );

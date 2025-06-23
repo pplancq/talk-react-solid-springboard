@@ -1,6 +1,7 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -24,6 +25,11 @@ export const InterfaceSegregationSlide = () => {
           Break large prop interfaces into focused, composable interfaces so that components only receive what they
           need.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 7 – Interface Segregation Principle (ISP)
+- Déf. officielle : « Les clients ne dépendent pas d’interfaces qu’ils n’utilisent pas »
+- En React : découper les props en interfaces ciblées
+- Exemple Before (gros TableProps) / After (DataProps, SortProps, …)
+- Bénéfice : clarté, découplage et tests facilitée`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -40,6 +46,11 @@ export const InterfaceSegregationSlide = () => {
         <Paragraph fragment>
           This interface tries to cover all possible table features, making it large and hard to maintain.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 7 – Interface Segregation Principle (ISP)
+- Déf. officielle : « Les clients ne dépendent pas d’interfaces qu’ils n’utilisent pas »
+- En React : découper les props en interfaces ciblées
+- Exemple Before (gros TableProps) / After (DataProps, SortProps, …)
+- Bénéfice : clarté, découplage et tests facilitée`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -63,6 +74,11 @@ const Table = ({
           </ListItem>
           <ListItem fragment>Improves clarity, reduces unwanted coupling, and makes testing simpler.</ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 7 – Interface Segregation Principle (ISP)
+- Déf. officielle : « Les clients ne dépendent pas d’interfaces qu’ils n’utilisent pas »
+- En React : découper les props en interfaces ciblées
+- Exemple Before (gros TableProps) / After (DataProps, SortProps, …)
+- Bénéfice : clarté, découplage et tests facilitée`}</NoteMarkdown>
       </Slide>
     </Slide>
   );

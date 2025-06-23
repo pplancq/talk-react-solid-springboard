@@ -1,6 +1,7 @@
 import { Image } from '@Front/components/Image';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -66,6 +67,12 @@ export const FurtherReadingSlide = () => {
         </ListItem>
       </List>
       <Image src={repoQr} role="presentation" fragment />
+      <NoteMarkdown>{`### Slide 10 – Further Reading
+- Articles :
+    - Applying SOLID Principles in Your React Applications (Medium)
+    - Clean Architecture by Uncle Bob
+- Docs officielles : React Hooks & Context API
+- Patrons & DDD : Domain-Driven Design (Fowler), Hexagonal Architecture (Wikipedia)`}</NoteMarkdown>
     </Slide>
   );
 };

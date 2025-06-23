@@ -1,5 +1,6 @@
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -37,6 +38,11 @@ export const ConclusionSlide = () => {
           <ListItem fragment>Stay pragmatic and adapt solutions to your context</ListItem>
         </List>
       </div>
+      <NoteMarkdown>{`### Slide 9 – Conclusion & Perspectives
+- Récapitulatif SOLID : socle pour un front propre et évolutif
+- Bénéfices : séparation des responsabilités, testabilité, maintenance, scalabilité
+- Vigilance : éviter la sur‐ingénierie, rester pragmatique selon le contexte
+- Appel à l’action : essayez d’appliquer un principe sur un composant dès maintenant`}</NoteMarkdown>
     </Slide>
   );
 };

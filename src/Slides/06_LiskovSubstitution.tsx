@@ -1,6 +1,7 @@
 import { CodeBlock } from '@Front/components/CodeBlock';
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Paragraph } from '@Front/components/Paragraph';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
@@ -25,6 +26,11 @@ export const LiskovSubstitutionSlide = () => {
         <Paragraph fragment fragmentIndex={0}>
           A component passed as a prop should honor the same interface, allowing seamless substitution.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 6 – Liskov Substitution Principle (LSP)
+- Déf. officielle : « Les sous‐types doivent pouvoir remplacer leurs types de base »
+- En React : passer un composant en prop doit toujours fonctionner
+- Exemple Card + ActionButton interchangeable (Button vs IconButton)
+- Bénéfice : interchangeabilité et contrat stable`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -42,6 +48,11 @@ export const LiskovSubstitutionSlide = () => {
         <Paragraph>
           Here, <code>ActionButton</code> can be replaced by any component that respects the same interface.
         </Paragraph>
+        <NoteMarkdown>{`### Slide 6 – Liskov Substitution Principle (LSP)
+- Déf. officielle : « Les sous‐types doivent pouvoir remplacer leurs types de base »
+- En React : passer un composant en prop doit toujours fonctionner
+- Exemple Card + ActionButton interchangeable (Button vs IconButton)
+- Bénéfice : interchangeabilité et contrat stable`}</NoteMarkdown>
       </Slide>
 
       <Slide autoAnimate>
@@ -80,6 +91,11 @@ export const LiskovSubstitutionSlide = () => {
             Components remain interchangeable and behavior stays consistent.
           </ListItem>
         </List>
+        <NoteMarkdown>{`### Slide 6 – Liskov Substitution Principle (LSP)
+- Déf. officielle : « Les sous‐types doivent pouvoir remplacer leurs types de base »
+- En React : passer un composant en prop doit toujours fonctionner
+- Exemple Card + ActionButton interchangeable (Button vs IconButton)
+- Bénéfice : interchangeabilité et contrat stable`}</NoteMarkdown>
       </Slide>
     </Slide>
   );

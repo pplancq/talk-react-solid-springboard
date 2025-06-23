@@ -1,5 +1,6 @@
 import { List } from '@Front/components/List';
 import { ListItem } from '@Front/components/ListItem';
+import { NoteMarkdown } from '@Front/components/NoteMarkdown';
 import { Slide } from '@Front/components/Slide';
 import { Title } from '@Front/components/Title';
 
@@ -23,6 +24,14 @@ export const IntroductionCleanArchitectureSlide = () => {
           <strong>Why React?</strong> Growing complexity demands these principles on the front-end
         </ListItem>
       </List>
+      <NoteMarkdown>{`### Slide 2 – Introduction to Clean Architecture
+- Définition rapide
+    - Famille de styles (hexagonal, onion, DDD) visant modularité, robustesse, maintenabilité
+- Mots‐clés : séparation des préoccupations, découplage, indépendance des couches, testabilité
+- Guidé par SOLID, KISS, DRY
+- Pourquoi React ?
+    - La complexité des front‐ends grandit : plus de composants, d’interfaces, de responsabilités
+    - SOLID aide à garder un code propre et évolutif`}</NoteMarkdown>
     </Slide>
   );
 };
