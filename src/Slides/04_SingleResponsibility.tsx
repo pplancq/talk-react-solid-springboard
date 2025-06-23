@@ -18,11 +18,13 @@ export const SingleResponsibilitySlide = () => {
         <Paragraph>
           <strong>Official Definition</strong>
         </Paragraph>
-        <Paragraph fragment>“A class (or component) should have only one reason to change.”</Paragraph>
-        <Paragraph fragment>
+        <Paragraph>“A class (or component) should have only one reason to change.”</Paragraph>
+        <Paragraph fragment fragmentIndex={0}>
           <em>In React</em>
         </Paragraph>
-        <Paragraph fragment>Each component or hook must have a single responsibility.</Paragraph>
+        <Paragraph fragment fragmentIndex={0}>
+          Each component or hook must have a single responsibility.
+        </Paragraph>
       </Slide>
       <Slide autoAnimate autoAnimateRestart>
         <Title variant="h3">React Example</Title>
@@ -39,7 +41,7 @@ export const SingleResponsibilitySlide = () => {
     </footer>
   </>
 );`}</CodeBlock>
-        <Paragraph fragment>Which extra responsibilities is `Layout` taking on beyond page structure?</Paragraph>
+        <Paragraph>Which extra responsibilities is `Layout` taking on beyond page structure?</Paragraph>
       </Slide>
       <Slide autoAnimate>
         <Title variant="h3">React Example</Title>

@@ -16,11 +16,11 @@ export const OpenCloseSlide = () => {
         <Paragraph>
           <strong>Official Definition</strong>
         </Paragraph>
-        <Paragraph fragment>“Software entities should be open for extension, but closed for modification.”</Paragraph>
-        <Paragraph fragment>
+        <Paragraph>“Software entities should be open for extension, but closed for modification.”</Paragraph>
+        <Paragraph fragment fragmentIndex={0}>
           <em>In React</em>
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph fragment fragmentIndex={0}>
           Use props-driven patterns or HOCs to extend behavior without modifying existing code.
         </Paragraph>
       </Slide>
@@ -40,7 +40,7 @@ const Button = ({ color, size, variant, icon, iconPlacement, children, ...props 
   </button>
 );
 `}</CodeBlock>
-        <Paragraph fragment>Button mixes core rendering and icon-placement logic.</Paragraph>
+        <Paragraph>Button mixes core rendering and icon-placement logic.</Paragraph>
       </Slide>
 
       <Slide autoAnimate>
@@ -48,8 +48,6 @@ const Button = ({ color, size, variant, icon, iconPlacement, children, ...props 
         <CodeBlock
           highlightLines="1-13"
           language="jsx"
-          fragment
-          fragmentIndex={0}
         >{`const Button = ({ color, size, variant, children, ...props }) => (
   <button
     style={{ color, fontSize: size }}

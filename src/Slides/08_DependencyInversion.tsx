@@ -16,13 +16,13 @@ export const DependencyInversionSlide = () => {
         <Paragraph>
           <strong>Official Definition</strong>
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph>
           “High-level modules should not depend on low-level modules. Both should depend on abstractions.”
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph fragment fragmentIndex={0}>
           <em>In React</em>
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph fragment fragmentIndex={0}>
           Depend on service interfaces (abstractions) rather than concrete implementations. Use Context or props to{' '}
           inject different behaviors.
         </Paragraph>
@@ -31,24 +31,28 @@ export const DependencyInversionSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">React Example</Title>
         <List>
-          <ListItem fragment>
+          <ListItem>
             Define the abstraction
-            <CodeBlock highlightLines="1-9" language="ts">{`interface FetchService {
+            <CodeBlock language="ts">{`interface FetchService {
   fetchData(url: string): Promise<any>
 }`}</CodeBlock>
           </ListItem>
           <ListItem fragment>
             Concrete implementations
-            <CodeBlock highlightLines="1-9" language="ts">{`class ApiFetchService implements FetchService {
-  fetchData = (url: string) => fetch(url).then(r => r.json())
+            <div style={{ display: 'flex' }}>
+              <CodeBlock language="ts">{`class ApiFetchService implements FetchService {
+  fetchData = (url: string) => 
+    fetch(url).then(r => r.json())
 }`}</CodeBlock>
-            <CodeBlock highlightLines="1-9" language="ts">{`class InMemoryFetchService implements FetchService {
-  fetchData = (url: string) => Promise.resolve({ data: 'mock' })
+              <CodeBlock language="ts">{`class InMemoryFetchService implements FetchService {
+  fetchData = (url: string) => 
+    Promise.resolve({ data: 'mock' })
 }`}</CodeBlock>
+            </div>
           </ListItem>
           <ListItem fragment>
             Create a Context with a default
-            <CodeBlock highlightLines="1-9" language="ts">{`const FetchContext = createContext<FetchService>(
+            <CodeBlock language="ts">{`const FetchContext = createContext<FetchService>(
   new ApiFetchService()
 )`}</CodeBlock>
           </ListItem>
@@ -57,7 +61,7 @@ export const DependencyInversionSlide = () => {
 
       <Slide autoAnimate>
         <Title variant="h3">Usage in a Component</Title>
-        <CodeBlock highlightLines="1-13" language="ts" fragment>{`const DataViewer = ({ url }) => {
+        <CodeBlock highlightLines="1-13" language="ts">{`const DataViewer = ({ url }) => {
   const fetchService = useContext<FetchService>(FetchContext)
   const [data, setData] = useState(null)
 
@@ -68,9 +72,11 @@ export const DependencyInversionSlide = () => {
   return <pre>{JSON.stringify(data, null, 2)}</pre>
 }`}</CodeBlock>
         <Paragraph fragment>Swapping Implementations</Paragraph>
-        <CodeBlock highlightLines="1-13" language="ts" fragment>{`<FetchContext value={new InMemoryFetchService()}>
-  <DataViewer url="/api/data" />
-</FetchContext>`}</CodeBlock>
+        <CodeBlock
+          highlightLines="1-13"
+          language="ts"
+          fragment
+        >{`<FetchContext value={new InMemoryFetchService()}>{...}</FetchContext>`}</CodeBlock>
         <List>
           <ListItem fragment>
             <strong>DIP in action:</strong> <code>DataViewer</code> relies only on the <code>FetchService</code>{' '}

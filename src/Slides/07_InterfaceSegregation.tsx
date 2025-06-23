@@ -16,11 +16,11 @@ export const InterfaceSegregationSlide = () => {
         <Paragraph>
           <strong>Official Definition</strong>
         </Paragraph>
-        <Paragraph fragment>“Clients should not be forced to depend on interfaces they do not use.”</Paragraph>
-        <Paragraph fragment>
+        <Paragraph>“Clients should not be forced to depend on interfaces they do not use.”</Paragraph>
+        <Paragraph fragment fragmentIndex={0}>
           <em>In React</em>
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph fragment fragmentIndex={0}>
           Break large prop interfaces into focused, composable interfaces so that components only receive what they
           need.
         </Paragraph>
@@ -44,7 +44,7 @@ export const InterfaceSegregationSlide = () => {
 
       <Slide autoAnimate>
         <Title variant="h3">React Example</Title>
-        <CodeBlock highlightLines="1-13" language="ts" fragment>{`interface DataProps   { data: any[]; }
+        <CodeBlock highlightLines="1-13" language="ts">{`interface DataProps   { data: any[]; }
 interface SortProps   { sortable: boolean; }
 interface FilterProps { filterable: boolean; }
 interface PageProps   { pagination: { pageSize: number; current: number; }; }

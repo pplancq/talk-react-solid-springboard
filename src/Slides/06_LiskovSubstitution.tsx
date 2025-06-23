@@ -18,11 +18,11 @@ export const LiskovSubstitutionSlide = () => {
         <Paragraph>
           <strong>Official Definition</strong>
         </Paragraph>
-        <Paragraph fragment>“Subtypes must be substitutable for their base types.”</Paragraph>
-        <Paragraph fragment>
+        <Paragraph>“Subtypes must be substitutable for their base types.”</Paragraph>
+        <Paragraph fragment fragmentIndex={0}>
           <em>In React</em>
         </Paragraph>
-        <Paragraph fragment>
+        <Paragraph fragment fragmentIndex={0}>
           A component passed as a prop should honor the same interface, allowing seamless substitution.
         </Paragraph>
       </Slide>
@@ -39,7 +39,7 @@ export const LiskovSubstitutionSlide = () => {
     <ActionButton {...props} />
   </section>
 );`}</CodeBlock>
-        <Paragraph fragment>
+        <Paragraph>
           Here, <code>ActionButton</code> can be replaced by any component that respects the same interface.
         </Paragraph>
       </Slide>
@@ -47,16 +47,8 @@ export const LiskovSubstitutionSlide = () => {
       <Slide autoAnimate>
         <Title variant="h3">React Example</Title>
         <div className={defaultClasses.exampleGrid}>
-          <Paragraph fragment fragmentIndex={0} className={defaultClasses.title1}>
-            Usage – Base Button
-          </Paragraph>
-          <CodeBlock
-            highlightLines="1-13"
-            language="jsx"
-            fragment
-            fragmentIndex={0}
-            className={defaultClasses.description1}
-          >{`<Card
+          <Paragraph className={defaultClasses.title1}>Usage – Base Button</Paragraph>
+          <CodeBlock highlightLines="1-13" language="jsx" className={defaultClasses.description1}>{`<Card
   title="Profile"
   content="User details"
   ActionButton={Button}
